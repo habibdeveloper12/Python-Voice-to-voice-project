@@ -30,6 +30,26 @@ def text_to_speech(text):
     tts_model.tts_to_file(text=text, file_path=filename)
     return filename
 
+# def text_to_space(text):
+    
+#     elevenlabs = ElevenLabs(
+#     api_key='sk_67fc737a206c6f264f575864038d75454aa19025a963e628',
+#     )
+#     audio = elevenlabs.text_to_speech.convert(
+#         text=text,
+#         voice_id="NOpBlnGInO9m6vDvFkFC",
+#         model_id="eleven_multilingual_v2",
+#         output_format="mp3_44100_128",
+#     )
+#     save_file_path=f"{uuid.uuid4()}.mp3"
+
+#     with open(save_file_path, "wb") as f:
+#         for chunk in audio:
+#             if chunk:
+#                 f.write(chunk)
+
+#     print(f"{save_file_path}: A audio file is saved")
+#     return save_file_path
 # Main logic
 def real_time_translate(audio_file):
     text = audio_transcription(audio_file)
